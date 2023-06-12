@@ -25,11 +25,6 @@ jobs:
         run: git clone git@github.com:ivan4ov4/automation_test.git
       - name: CD
         run: npm install /home/ivan4ov4/actions-runner/_work/automation_test/automation_test/automation_test
-      - name: RUN bUILD
+      - name: RUN bUILD 
         run: npm run build /home/ivan4ov4/actions-runner/_work/automation_test/automation_test/automation_test
       
-
-      # - name: NPM Install
-      #   run: npm install
-      # - name: step 2
-      #   run: that command
