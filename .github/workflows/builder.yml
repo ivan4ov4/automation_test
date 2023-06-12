@@ -1,0 +1,8 @@
+name: Builder
+
+on: push
+
+jobs:
+  autobilder:
+    name: uilder CoderBAse
+    runs-on: ubuntu-lastest
