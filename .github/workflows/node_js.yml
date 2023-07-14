@@ -1,0 +1,27 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+
+    # strategy:
+    #   matrix:
+    #     node-version: [20.x]
+    #     # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    steps:
+      - name: Create .env file
+        uses: ozaytsev86/create-env-file@v1
+        with:
+          INPUT_ENV_TEST_API_KEY: ${{ secrets.TEST_API_KEY }}
+          INPUT_ENV_ANOTHER_KEY: ${{ secrets.ANOTHER_KEY }}
+      
